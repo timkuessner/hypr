@@ -132,15 +132,12 @@ hl.config({
         gaps_in = 2,
         gaps_out = 4,
         border_size = 2,
-        -- https://wiki.hypr.land/Configuring/Variables/#variable-types for info about colors
-        -- Set to true enable resizing windows by clicking and dragging on borders and gaps
         resize_on_border = true,
-        -- Please see https://wiki.hypr.land/Configuring/Tearing/ before you turn this on
         allow_tearing = false,
         layout = "dwindle",
         col = {
-            active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border = "rgb(ffffff)",
+            inactive_border = "rgb(aaaaaa)",
         },
     },
 })
@@ -151,26 +148,10 @@ hl.config({
     decoration = {
         rounding = 10,
         rounding_power = 2,
-        -- Change transparency of focused and unfocused windows
         active_opacity = 1.0,
         inactive_opacity = 1.0,
-        -- shadow {
-        --     enabled = true
-        --     range = 4
-        --     render_power = 3
-        --     color = rgba(1a1a1aee)
-        -- }
-        -- https://wiki.hypr.land/Configuring/Variables/#blur
-        -- blur {
-        --     enabled = true
-        -- 
-        --     size = 2
-        --     passes = 1
-        -- }
     },
 })
-
--- https://wiki.hypr.land/Configuring/Variables/#animations
 
 hl.config({
     animations = {
@@ -520,7 +501,6 @@ hl.window_rule({
 -- Autostart
 hl.on("hyprland.start", function()
     hl.exec_cmd("~/.local/bin/hypr-panel-start.sh")
-    hl.exec_cmd("swww-daemon")
-    hl.exec_cmd("sleep 2 && swww img \"$(find ~/Pictures/wallpapers/ -type f | shuf -n 1)\"")
+    hl.exec_cmd("hyprpaper")
     hl.exec_cmd("swaync")
 end)
