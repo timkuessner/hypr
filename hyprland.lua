@@ -284,17 +284,17 @@ local mainMod = "SUPER"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
 
-hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + " .. "Q", hl.dsp.exec_cmd(terminal))
 
 hl.bind(mainMod .. " + " .. "C", hl.dsp.window.close())
 
 hl.bind(mainMod .. " + " .. "M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 
-hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd("dolphin"))
+hl.bind(mainMod .. " + " .. "E", hl.dsp.exec_cmd(fileManager))
 
 hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 
-hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd("rofi -show drun"))
+hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd(menu))
 
 hl.bind(mainMod .. " + " .. "P", hl.dsp.window.pseudo())
 
@@ -305,8 +305,6 @@ hl.bind(mainMod .. " + " .. "J", hl.dsp.layout("togglesplit"))
 -- dwindle
 
 hl.bind(mainMod .. " + " .. "F", hl.dsp.window.fullscreen())
-
-hl.bind(mainMod .. " + " .. "W", hl.dsp.exec_cmd("swww img \"$(find ~/Pictures/wallpapers/ -type f | shuf -n 1)\""))
 
 hl.bind(mainMod .. " + " .. "L", hl.dsp.exec_cmd("hyprlock"))
 
