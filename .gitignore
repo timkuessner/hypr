@@ -1,4 +1,4 @@
 *
 !.gitignore
-!hyprland.conf
+!hyprland.lua
 !hyprlock.conf
