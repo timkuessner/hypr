@@ -57,7 +57,7 @@ local terminal = "kitty"
 
 local fileManager = "dolphin"
 
-local menu = "rofi -show drun"
+local menu = "rofi -show drun -theme ~/.config/rofi/theme.rasi"
 
 --################
 
